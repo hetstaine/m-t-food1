@@ -89,15 +89,20 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+/* =================== HERO TEXT =================== */
 .hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: white; /* text color white */
   text-align: center;
   width: 90%;
   max-width: 800px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent black background */
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .cta-btn {
