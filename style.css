@@ -1,8 +1,8 @@
-/* ===================== GENERAL ===================== */
+/* ================== General ================== */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
-  background: #fff8f0; /* warm light background for food theme */
+  background: #fff8f0; /* light recipe-friendly background */
   color: #333;
 }
 
@@ -10,12 +10,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  text-align: center; /* center content by default */
 }
 
-/* ===================== NAVBAR ===================== */
+/* ================== Navbar ================== */
 .navbar {
-  background: #ffe5d9; /* soft warm tone */
+  background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 15px 0;
   position: relative;
@@ -45,11 +44,12 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 600;
+  letter-spacing: 0.5px;
   transition: color 0.2s ease;
 }
 
 .navbar a:hover {
-  color: #ff7f50; /* coral accent */
+  color: #ff7f50; /* coral highlight */
 }
 
 #langSwitcher {
@@ -59,25 +59,19 @@ body {
   padding: 5px;
 }
 
-/* ===================== HERO ===================== */
+/* ================== Hero ================== */
 .hero {
   width: 100%;
   overflow: hidden;
   position: relative;
-  margin-bottom: 40px;
-}
-
-.hero .image-tooltip-container {
-  display: block;
-  width: 100%;
-  position: relative;
+  text-align: center;
 }
 
 .hero img {
   width: 100%;
-  height: 60vh;
+  max-height: 60vh;
   object-fit: cover;
-  border-radius: 10px;
+  display: block;
 }
 
 .hero-text {
@@ -85,14 +79,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: white;
   text-align: center;
+  width: 90%;
   max-width: 800px;
 }
 
 .cta-btn {
   background: #ff7f50;
-  padding: 12px 28px;
+  padding: 12px 24px;
   color: white;
   text-decoration: none;
   border-radius: 25px;
@@ -101,66 +96,84 @@ body {
   margin-top: 15px;
 }
 
-/* ===================== FEATURED & RECIPE CARDS ===================== */
-.featured, .recipes, .tips {
+/* ================== Featured & Recipes ================== */
+.featured, .product-grid {
   padding: 60px 20px;
-}
-
-.featured h2, .recipes h2, .tips h2 {
-  margin-bottom: 40px;
-  color: #d35400; /* dark orange accent for headings */
+  text-align: center;
 }
 
 .product-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center; /* centers cards horizontally */
+  margin-top: 40px;
 }
 
 .product-card {
   background: #fff3e6;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .product-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 15px;
 }
 
 .product-card h3 {
-  margin-bottom: 10px;
-  color: #e67e22;
+  margin: 10px 0 8px;
+  font-size: 1.2rem;
+  color: #333;
 }
 
 .product-card p {
   font-size: 0.95rem;
-  margin-bottom: 8px;
+  line-height: 1.4;
   color: #555;
 }
 
 .product-card .price {
   font-weight: bold;
-  color: #d35400;
+  color: #ff7f50;
+  margin-top: 8px;
 }
 
-/* ===================== TIPS CARDS ===================== */
-.tips .product-card {
-  background: #fff0e6;
+/* ================== Newsletter ================== */
+.newsletter {
+  background: #ffe6d6;
+  text-align: center;
+  padding: 60px 20px;
 }
 
-.tips .product-card img {
-  height: 180px;
+.newsletter input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-/* ===================== TOOLTIP ===================== */
+.newsletter button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: #ff7f50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ================== Tooltips ================== */
 .tooltip-text {
   visibility: hidden;
   max-width: 200px;
@@ -183,65 +196,24 @@ body {
   opacity: 1;
 }
 
-/* ===================== NEWSLETTER ===================== */
-.newsletter {
-  background: #ffd9b3;
-  padding: 60px 20px;
-}
-
-.newsletter input[type="email"] {
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-right: 10px;
-}
-
-.newsletter button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background: #ff7f50;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.newsletter button:hover {
-  background: #d35400;
-}
-
-/* ===================== CONTACT ===================== */
+/* ================== Contact Page ================== */
 .contact {
   padding: 80px 20px;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #d35400;
-}
-
-.contact-intro {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  color: #555;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 }
 
 .contact-layout {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .contact-form {
   flex: 1;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 600px;
   text-align: left;
 }
 
@@ -253,7 +225,6 @@ body {
   display: block;
   font-weight: 600;
   margin-bottom: 6px;
-  color: #333;
 }
 
 .contact-form input,
@@ -265,11 +236,6 @@ body {
   font-size: 1rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #ff7f50;
-}
-
 .btn-primary {
   padding: 12px 28px;
   background: #ff7f50;
@@ -278,31 +244,23 @@ body {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
+  margin-top: 8px;
 }
 
-.btn-primary:hover {
-  background: #d35400;
-}
-
-/* ===================== CONTACT INFO ===================== */
 .contact-details {
   flex: 0 0 280px;
   text-align: left;
 }
 
-.contact-details h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+.contact-details .info-block {
+  margin-bottom: 32px;
 }
 
-.contact-details p,
-.contact-details .social-links a {
-  font-size: 1rem;
-  color: #555;
-  text-decoration: none;
-  display: flex;
-  justify-content: flex-start
-  margin-bottom: 6px;
+.contact-details .social-links {
+  display: flex;           /* horizontal layout */
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
 }
 
 .contact-details .social-links a img {
@@ -316,7 +274,16 @@ body {
   transform: scale(1.2);
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* ================== Lookbook/Tips Page ================== */
+.lookbook .product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ================== Responsive ================== */
 @media (max-width: 768px) {
   .hero img {
     height: 50vh;
@@ -334,7 +301,6 @@ body {
 
   .newsletter input[type="email"] {
     width: 70%;
-    margin-bottom: 10px;
   }
 
   .contact-layout {
@@ -343,12 +309,6 @@ body {
   }
 
   .contact-details .social-links {
-    display: flex;
     justify-content: center;
-    gap: 12px;
-  }
-
-  .product-card {
-    width: 90%;
   }
 }
