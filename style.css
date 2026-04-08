@@ -1,8 +1,12 @@
-/* ================== General ================== */
+/* ===================== Fonts ===================== */
+/* Add in <head> of your HTML if not already */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* ===================== General Styles ===================== */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Lora', serif;
   margin: 0;
-  background: #fff8f0; /* light recipe-friendly background */
+  background: #fff8f0; /* light warm cream */
   color: #333;
 }
 
@@ -12,11 +16,11 @@ body {
   padding: 0 20px;
 }
 
-/* ================== Navbar ================== */
+/* ===================== NAVBAR ===================== */
 .navbar {
-  background: #fff;
+  background: #ffe8d6;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 15px 0;
+  padding: 20px 0;
   position: relative;
   text-align: center;
 }
@@ -49,7 +53,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #ff7f50; /* coral highlight */
+  color: #e76f51;
 }
 
 #langSwitcher {
@@ -59,17 +63,16 @@ body {
   padding: 5px;
 }
 
-/* ================== Hero ================== */
+/* ===================== HERO ===================== */
 .hero {
-  width: 100%;
-  overflow: hidden;
   position: relative;
   text-align: center;
+  margin-bottom: 50px;
 }
 
-.hero img {
+.hero .image-tooltip-container img {
   width: 100%;
-  max-height: 60vh;
+  height: 60vh;
   object-fit: cover;
   display: block;
 }
@@ -79,14 +82,24 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
   width: 90%;
   max-width: 800px;
 }
 
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
 .cta-btn {
-  background: #ff7f50;
+  background: #e76f51;
   padding: 12px 24px;
   color: white;
   text-decoration: none;
@@ -96,62 +109,74 @@ body {
   margin-top: 15px;
 }
 
-/* ================== Featured & Recipes ================== */
+/* ===================== RECIPES / FEATURED ===================== */
 .featured, .product-grid {
-  padding: 60px 20px;
   text-align: center;
+  padding: 60px 20px;
+}
+
+.featured h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  justify-items: center; /* centers cards horizontally */
-  margin-top: 40px;
 }
 
 .product-card {
   background: #fff3e6;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  width: 300px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .product-card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
 }
 
 .product-card h3 {
-  margin: 10px 0 8px;
-  font-size: 1.2rem;
-  color: #333;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .product-card p {
   font-size: 0.95rem;
-  line-height: 1.4;
   color: #555;
+  margin-bottom: 10px;
+  word-wrap: break-word;
 }
 
-.product-card .price {
-  font-weight: bold;
-  color: #ff7f50;
-  margin-top: 8px;
+/* ===================== TIPS / LOOKBOOK ===================== */
+.lookbook .product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* ================== Newsletter ================== */
+.lookbook .product-card p {
+  text-align: left;
+  padding: 0 5px;
+}
+
+/* ===================== NEWSLETTER ===================== */
 .newsletter {
-  background: #ffe6d6;
+  background: #ffe8d6;
   text-align: center;
   padding: 60px 20px;
 }
@@ -161,22 +186,23 @@ body {
   width: 250px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  margin-right: 10px;
 }
 
 .newsletter button {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background: #ff7f50;
+  background: #e76f51;
   color: white;
   font-weight: bold;
   cursor: pointer;
 }
 
-/* ================== Tooltips ================== */
+/* ===================== TOOLTIP ===================== */
 .tooltip-text {
   visibility: hidden;
-  max-width: 200px;
+  max-width: 220px;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   text-align: center;
@@ -196,7 +222,7 @@ body {
   opacity: 1;
 }
 
-/* ================== Contact Page ================== */
+/* ===================== CONTACT ===================== */
 .contact {
   padding: 80px 20px;
   text-align: center;
@@ -204,16 +230,16 @@ body {
 
 .contact-layout {
   display: flex;
-  gap: 40px;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 40px;
   margin-top: 40px;
 }
 
 .contact-form {
   flex: 1;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 500px;
   text-align: left;
 }
 
@@ -223,7 +249,7 @@ body {
 
 .form-group label {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 6px;
 }
 
@@ -231,84 +257,42 @@ body {
 .contact-form textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 1rem;
+  border: 1px solid #ccc;
 }
 
 .btn-primary {
   padding: 12px 28px;
-  background: #ff7f50;
+  background: #e76f51;
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 8px;
 }
 
 .contact-details {
   flex: 0 0 280px;
-  text-align: left;
-}
-
-.contact-details .info-block {
-  margin-bottom: 32px;
+  text-align: center;
 }
 
 .contact-details .social-links {
-  display: flex;           /* horizontal layout */
-  flex-direction: row;
-  gap: 12px;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
 }
 
 .contact-details .social-links a img {
   width: 32px;
   height: 32px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
 }
 
-.contact-details .social-links a img:hover {
-  transform: scale(1.2);
-}
-
-/* ================== Lookbook/Tips Page ================== */
-.lookbook .product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* ================== Responsive ================== */
+/* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
-  .hero img {
-    height: 50vh;
-  }
-
-  .hero-text {
-    font-size: 0.9rem;
-    width: 90%;
-  }
-
-  .navbar nav ul {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .newsletter input[type="email"] {
-    width: 70%;
-  }
-
-  .contact-layout {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .contact-details .social-links {
-    justify-content: center;
-  }
+  .hero img { height: 50vh; }
+  .hero-text { font-size: 0.9rem; }
+  .navbar nav ul { flex-direction: column; gap: 12px; }
+  .newsletter input[type="email"] { width: 70%; margin-bottom: 10px; }
+  .product-card { width: 90%; }
 }
