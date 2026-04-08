@@ -1,24 +1,18 @@
-/* =================== FONT IMPORT =================== */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+/* =================== GENERAL =================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 
-/* =================== GLOBAL =================== */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
   margin: 0;
-  background: #fff8f0;
+  background: #fdf6e3;
   color: #333;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  color: #333;
+  line-height: 1.6;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
 }
 
 /* =================== NAVBAR =================== */
@@ -26,8 +20,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 20px 0;
-  position: relative;
   text-align: center;
+  position: relative;
 }
 
 .logo img {
@@ -36,29 +30,24 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 80px;
 }
 
-.navbar nav {
-  margin-top: 10px;
-}
-
 .navbar nav ul {
   display: flex;
   justify-content: center;
   gap: 24px;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px 0 0 0;
 }
 
 .navbar a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
-  letter-spacing: 0.5px;
   transition: color 0.2s ease;
 }
 
 .navbar a:hover {
-  color: #ff7043; /* warm accent color for food theme */
+  color: #e76f51;
 }
 
 #langSwitcher {
@@ -70,10 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* =================== HERO =================== */
 .hero {
-  width: 100vw;
-  max-width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .hero .image-tooltip-container {
@@ -84,36 +73,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero img {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   object-fit: cover;
   display: block;
 }
 
-/* =================== HERO TEXT =================== */
 .hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* text color white */
+  color: #fff;
   text-align: center;
   width: 90%;
   max-width: 800px;
-  background: rgba(0, 0, 0, 0.4); /* semi-transparent black background */
+  background: rgba(0, 0, 0, 0.55);
   padding: 20px 30px;
   border-radius: 12px;
-  box-sizing: border-box;
 }
 
 .hero-text h1,
 .hero-text h2,
 .hero-text h3 {
-  color: #fff !important;            /* force white */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8); /* improve contrast */
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 .cta-btn {
-  background: #ff7043;
+  background: #e76f51;
   padding: 12px 24px;
   color: white;
   text-decoration: none;
@@ -121,69 +114,66 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   display: inline-block;
   margin-top: 15px;
-  transition: background 0.3s ease;
 }
 
-.cta-btn:hover {
-  background: #e64a19;
-}
-
-/* =================== FEATURED & RECIPE GRID =================== */
-.featured, .recipes, .tips {
+/* =================== RECIPE CARDS =================== */
+.featured,
+.recipes,
+.tips {
   padding: 60px 20px;
   text-align: center;
 }
 
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .product-card {
-  background: #fff3e6;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 400px;
-  box-sizing: border-box;
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
   text-align: center;
-  word-wrap: break-word;
+  min-height: 450px; /* extend card height for long text */
 }
 
 .product-card img {
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .product-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 10px;
 }
 
 .product-card p {
   font-size: 1rem;
-  color: #555;
+  color: #333;
+  text-align: left;   /* text inside card left-aligned for readability */
+  word-wrap: break-word; /* ensures long text wraps */
+  white-space: normal;
   margin-bottom: 10px;
-  padding: 0 10px;
-  box-sizing: border-box;
-  word-wrap: break-word;
 }
 
 /* =================== NEWSLETTER =================== */
 .newsletter {
-  background: #ffe0cc;
+  background: #ffe5d9;
   text-align: center;
   padding: 60px 20px;
+}
+
+.newsletter form {
+  margin-top: 20px;
 }
 
 .newsletter input[type="email"] {
@@ -191,22 +181,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 250px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  margin-right: 10px;
 }
 
 .newsletter button {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background: #ff7043;
+  background: #e76f51;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.newsletter button:hover {
-  background: #e64a19;
 }
 
 /* =================== TOOLTIP =================== */
@@ -257,7 +241,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 40px;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .contact-form {
@@ -291,12 +274,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #ff7043;
+  border-color: #e76f51;
 }
 
 .btn-primary {
   padding: 12px 28px;
-  background: #ff7043;
+  background: #e76f51;
   color: white;
   border: none;
   border-radius: 6px;
@@ -307,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-  background: #e64a19;
+  background: #d65a3f;
 }
 
 /* Contact Info Sidebar */
@@ -335,49 +318,30 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 6px;
 }
 
-/* Horizontal social icons */
 .contact-details .social-links {
-  display: flex;
-  flex-direction: row;
+  display: flex; /* horizontal layout */
   gap: 16px;
-  align-items: center;
-}
-
-.contact-details .social-links a img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.contact-details .social-links a img:hover {
-  transform: scale(1.2);
-}
-
-/* =================== TIPS / LOOKBOOK =================== */
-.tips .product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
-
-.tips .product-card p {
-  font-size: 1rem;
-  padding: 0 10px;
-  color: #555;
 }
 
 /* =================== RESPONSIVE =================== */
+@media (max-width: 1024px) {
+  .hero img {
+    height: 60vh;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .hero img {
     height: 50vh;
   }
 
   .hero-text {
-    font-size: 0.9rem;
     width: 90%;
+    font-size: 0.9rem;
   }
 
   .navbar nav ul {
@@ -387,7 +351,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .newsletter input[type="email"] {
     width: 70%;
-    margin-bottom: 10px;
   }
 
   .contact-layout {
@@ -397,9 +360,5 @@ h1, h2, h3, h4, h5, h6 {
 
   .contact-details .social-links {
     justify-content: center;
-  }
-
-  .product-card {
-    max-width: 90%;
   }
 }
