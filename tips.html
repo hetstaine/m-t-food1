@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="title">Cooking Tips</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Delish Delights Logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="recipes.html" data-i18n="nav.collections">Recipes</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+        <li><a href="tips.html" data-i18n="nav.lookbook">Cooking Tips</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <select id="langSwitcher">
+      <option value="en">EN</option>
+      <option value="uk">UK</option>
+    </select>
+  </div>
+</header>
+
+<section class="lookbook container">
+  <h2 data-i18n="lookbook.title">Cooking Tips</h2>
+  <div class="product-grid">
+
+    <!-- Tip 1 -->
+    <div class="product-card">
+      <div class="image-tooltip-container">
+        <img src="assets/images/en/look1.jpg" data-i18n-img="look1.img" alt="Grilling Mastery" alt-key="lookbook.caption1">
+        <div class="tooltip-text" data-i18n="lookbook.caption1">Grilling Mastery</div>
+      </div>
+      <p data-i18n="lookbook.desc1">
+        Don’t let your veggies get cold feet! High heat sears flavor and locks in juiciness.
+      </p>
+    </div>
+
+    <!-- Tip 2 -->
+    <div class="product-card">
+      <div class="image-tooltip-container">
+        <img src="assets/images/en/look2.jpg" data-i18n-img="look2.img" alt="Baking Basics" alt-key="lookbook.caption2">
+        <div class="tooltip-text" data-i18n="lookbook.caption2">Baking Basics</div>
+      </div>
+      <p data-i18n="lookbook.desc2">
+        Measure twice, bake once — precision is the name of the game. And remember, the proof is in the pudding!
+      </p>
+    </div>
+
+    <!-- Tip 3 -->
+    <div class="product-card">
+      <div class="image-tooltip-container">
+        <img src="assets/images/en/look3.jpg" data-i18n-img="look3.img" alt="Sautéing Secrets" alt-key="lookbook.caption3">
+        <div class="tooltip-text" data-i18n="lookbook.caption3">Sautéing Secrets</div>
+      </div>
+      <p data-i18n="lookbook.desc3">
+        Keep the pan hot but not flaming mad. Quick tosses bring out the aroma without burning the daylights out of your ingredients!
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

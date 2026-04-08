@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="title">Delish Delights - Recipe Website</title>
+  <title data-i18n="title">Recipes</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,24 +29,12 @@
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="image-tooltip-container">
-    <img src="assets/images/en/hero.jpg" data-i18n-img="hero.img" alt="Featured Recipe: Pizza Margherita" alt-key="hero.title">
-    <div class="tooltip-text" data-i18n="hero.title">Featured Recipe: Pizza Margherita</div>
-  </div>
-  <div class="hero-text">
-    <h1 data-i18n="hero.title">Featured Recipe: Pizza Margherita</h1>
-    <p data-i18n="hero.subtitle">Simple, delicious, and perfect for any night in.</p>
-    <a href="recipes.html" class="cta-btn" data-i18n="hero.cta">See Recipe</a>
-  </div>
-</section>
-
-<!-- Featured Recipe -->
 <section class="featured">
-  <h2 data-i18n="home.featured">Featured Recipe</h2>
+  <h2 data-i18n="collections.title">Our Recipes</h2>
 
   <div class="product-grid">
+
+    <!-- Recipe 1 -->
     <div class="product-card">
       <div class="image-tooltip-container">
         <img 
@@ -72,17 +60,59 @@
 7. Slice and enjoy warm.
       </pre>
     </div>
-  </div>
-</section>
 
-<!-- Newsletter -->
-<section class="newsletter">
-  <h2 data-i18n="newsletter.title">Stay in the Loop</h2>
-  <p data-i18n="newsletter.subtitle">Sign up for recipes, tips, and tasty updates.</p>
-  <form>
-    <input type="email" placeholder="Your email">
-    <button type="submit" data-i18n="newsletter.cta">Subscribe</button>
-  </form>
+    <!-- Recipe 2 -->
+    <div class="product-card">
+      <div class="image-tooltip-container">
+        <img 
+          src="assets/images/en/product2.jpg"
+          data-i18n-img="product2.img"
+          alt="Sushi"
+          alt-key="product2.name"
+        >
+        <div class="tooltip-text" data-i18n="product2.name">Sushi</div>
+      </div>
+
+      <h3 data-i18n="product2.name">Sushi</h3>
+      <p data-i18n="product2.desc">Delicate rolls with fresh fish, rice, and nori seaweed.</p>
+      <p class="price" data-i18n="product2.price">Prep Time: 45 min</p>
+      <p class="sizes" data-i18n="product2.sizes">Servings: 2</p>
+      <pre class="instructions" data-i18n="product2.instructions">
+1. Rinse sushi rice until water runs clear.
+2. Cook rice and season with rice vinegar, sugar, and salt.
+3. Place nori on bamboo mat, spread rice thinly.
+4. Add fish, avocado, cucumber.
+5. Roll tightly and slice with wet knife.
+6. Serve with soy sauce, wasabi, and pickled ginger.
+      </pre>
+    </div>
+
+    <!-- Recipe 3 -->
+    <div class="product-card">
+      <div class="image-tooltip-container">
+        <img 
+          src="assets/images/en/product3.jpg"
+          data-i18n-img="product3.img"
+          alt="Burger"
+          alt-key="product3.name"
+        >
+        <div class="tooltip-text" data-i18n="product3.name">Burger</div>
+      </div>
+
+      <h3 data-i18n="product3.name">Burger</h3>
+      <p data-i18n="product3.desc">Juicy beef patty with lettuce, tomato, cheese, and special sauce.</p>
+      <p class="price" data-i18n="product3.price">Prep Time: 25 min</p>
+      <p class="sizes" data-i18n="product3.sizes">Servings: 1</p>
+      <pre class="instructions" data-i18n="product3.instructions">
+1. Season beef patty with salt and pepper.
+2. Grill over medium-high heat for 4-5 minutes per side.
+3. Toast buns lightly.
+4. Assemble burger with lettuce, tomato, cheese, and sauce.
+5. Serve with a side of fries or salad.
+      </pre>
+    </div>
+
+  </div>
 </section>
 
 <script src="app.js"></script>
