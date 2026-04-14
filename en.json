@@ -1,6 +1,6 @@
 {
   "title": "Feelin' Peachy - Recipe Website",
-  
+
   "nav.home": "Home",
   "nav.collections": "Recipes",
   "nav.about": "About Us",
@@ -56,10 +56,13 @@
   "contact.text": "Have questions, suggestions, or want to share your own recipe? We’d love to hear from you!",
   "contact.nameLabel": "Your Name",
   "contact.emailLabel": "Email Address",
-  "contact.phoneLabel": "Phone",
   "contact.messageLabel": "Message",
   "contact.cta": "Send Message",
-  "contact.follow": "Follow Us",
+  "contact.name": "John Doe",
+  "contact.email": "you@example.com",
+  "contact.message": "Your message...",
+  "contact.follow": "Stay Connected",
+  "contact.phoneLabel": "Phone",
 
   "newsletter.title": "Stay in the Loop",
   "newsletter.subtitle": "Sign up for recipes, tips, and tasty updates.",
